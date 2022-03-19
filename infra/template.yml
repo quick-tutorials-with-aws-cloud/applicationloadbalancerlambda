@@ -3,7 +3,6 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: Creates an Application Load Balancer integrated to a Lambda function
 
 Parameters:
-
   FunctionName:
     Type: String
     Default: LoadBalancerLambda
@@ -33,7 +32,6 @@ Parameters:
     Default: tg
 
 Resources:
-
   LambdaExecutionRole:
     Type: AWS::IAM::Role
     Properties:
@@ -119,7 +117,7 @@ Resources:
       # LoadBalancerAttributes:
       #   - Key: access_logs.s3.enabled
       #     Name: true
-      #   - Key: access_logs.s3.prefix 
+      #   - Key: access_logs.s3.prefix
       #     Name: !Ref BucketLoadBalancerLogs
       #   - Key: access_logs.s3.bucket
       #     Name: !Ref BucketKeyLoadBalancerLogs
